@@ -168,11 +168,11 @@ public class MainProgram {
 		}
 	}
 	
-	public int calMin_1712293(int a, int b) {
+	private int calMin_1712293(int a, int b) {
 		return (a < b)? a : b;
 	}
 	
-	public int calMax_1712293(int a, int b)
+	private int calMax_1712293(int a, int b)
 	{
 		return (a >= b)? a : b;
 	}
