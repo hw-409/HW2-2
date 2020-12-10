@@ -51,6 +51,12 @@ public class MainProgram {
     				}
     			} while((num != 1) || (num != 2));
     	}
+        else if (studentID == 1712293)
+        {
+        	System.out.println("[Student ID: 1712293]");
+        	chooseMenu_1712293();
+        	System.out.println();
+        }
         
         else 
             System.out.println("To be developed...\n");
@@ -131,5 +137,44 @@ public class MainProgram {
 		}
 		return min;	
 	}   
+	
+	
+	public void chooseMenu_1712293() {
+		Scanner scanner = new Scanner(System.in);
+		int menuNum, num1, num2, result;
+		
+		System.out.println("1. Calculate Min value(int)");
+		System.out.println("2. Calculate Max value(int)");
+		System.out.print("Enter menu numbers: ");
+    	menuNum = scanner.nextInt();
+		
+		if(menuNum == 1) {
+			System.out.print("Enter first number : ");
+			num1 = scanner.nextInt();
+			
+			System.out.print("Enter second number : ");
+			num2 = scanner.nextInt();
+			
+			System.out.println("minValue is "+calMin_1712293(num1, num2)+".");
+			
+		}else {
+			System.out.print("Enter first number : ");
+			num1 = scanner.nextInt();
+			
+			System.out.print("Enter second number : ");
+			num2 = scanner.nextInt();
+
+			System.out.println("maxValue is "+calMax_1712293(num1, num2)+".");
+		}
+	}
+	
+	public int calMin_1712293(int a, int b) {
+		return (a < b)? a : b;
+	}
+	
+	public int calMax_1712293(int a, int b)
+	{
+		return (a >= b)? a : b;
+	}
     
 }
