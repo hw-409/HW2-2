@@ -146,7 +146,7 @@ public class MainProgram {
 		System.out.println("1. Calculate Min value(int)");
 		System.out.println("2. Calculate Max value(int)");
 		System.out.print("Enter menu numbers: ");
-    	menuNum = scanner.nextInt();
+    		menuNum = scanner.nextInt();
 		
 		if(menuNum == 1) {
 			System.out.print("Enter first number : ");
