@@ -96,13 +96,18 @@ public class MainProgram {
     
     public int getKeyNumber() {
     	Scanner scan = new Scanner(System.in);
-    	System.out.print("Enter Number: ");
+    	System.out.print("Enter Number less than 100 : ");
     	int num = scan.nextInt();
+	while(num > 100) {
+		System.out.print("Enter Number LESS than 100 : ");
+		num = scan.nextInt();
+	}
     	
     	return num;
     }
     
     public int calc_sum(int menu, int key_number) {
+	if(key_number > 100) key_number = 0;
     	int result = 0;
     	int sp = 0;
     	if(menu == 2) { sp = 1; }
