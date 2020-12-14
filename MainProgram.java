@@ -67,7 +67,7 @@ public class MainProgram {
 	}
 	else if ( student ID == 1616409 ){
 		System.out.println("[Student ID: 1616409]");
-		cal_1616409();
+	HW_1616409();
 	}	
     }
 
@@ -277,7 +277,7 @@ public class MainProgram {
 		return a;
 	}
 	
-	public void cal_1616409(){
+	public void HW_1616409(){
 	   Scanner scan = new Scanner(System.in);
 		System.out.println("1. Factorial");
 		System.out.println("2. Sum");
