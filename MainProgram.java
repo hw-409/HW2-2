@@ -57,11 +57,62 @@ public class MainProgram {
         	chooseMenu_1712293();
         	System.out.println();
         }
-        
+        else if (studentID == 1710904) {
+        	System.out.println("[Student ID: 1710904]");
+        	calculate_1710904();
+        }
         else 
             System.out.println("To be developed...\n");
     }
 
+    public void calculate_1710904() {
+    	int menu = getCalcMenu();
+    	while(menu == -1) {
+    		System.out.println("Choose menu number 1 or 2");
+    		menu = getCalcMenu();
+    	}
+    	
+    	int key_number = getKeyNumber();
+    	int result = calc_sum(menu, key_number);
+    	System.out.println("[RESULT] " + result);
+    	return;
+    }
+    
+    public int getCalcMenu() {
+    	Scanner scan = new Scanner(System.in);
+    	System.out.println("1. Calculate even sum");
+    	System.out.println("2. Calculate odd sum");
+    	System.out.print("Enter menu number: ");
+    	int input = scan.nextInt();
+    	
+    	if(checkMenuInput(input)) {	return input; }
+    	else return -1;
+    }
+    
+    public boolean checkMenuInput(int input) {
+    	if(input == 1 || input == 2) return true;
+    	else return false;
+    }
+    
+    public int getKeyNumber() {
+    	Scanner scan = new Scanner(System.in);
+    	System.out.print("Enter Number: ");
+    	int num = scan.nextInt();
+    	
+    	return num;
+    }
+    
+    public int calc_sum(int menu, int key_number) {
+    	int result = 0;
+    	int sp = 0;
+    	if(menu == 2) { sp = 1; }
+    	
+    	for (int i=sp; i<=key_number; i+=2) {
+    		result += i;
+    	}
+    	
+    	return result;
+    }
     
     public void hw02_1710344() {
     	int num1;
