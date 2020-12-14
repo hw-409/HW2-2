@@ -61,8 +61,10 @@ public class MainProgram {
         	System.out.println("[Student ID: 1710904]");
         	calculate_1710904();
         }
-        else 
-            System.out.println("To be developed...\n");
+        else if (studentID == 1711625){ 
+            	System.out.println("[Student ID: 1711625]");
+	    	hw_1711625();
+	}
     }
 
     public void calculate_1710904() {
@@ -228,4 +230,44 @@ public class MainProgram {
 		return (a >= b)? a : b;
 	}
     
+	
+	public void hw_1711625(){
+		int num;
+		int menu;
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("1. Calculate the Reciprocal (integer) ");
+		System.out.println("2. Calculate the Absolute number (integer) ");
+		System.out.print("Enter menu numbers: ");
+		menu = scan.nextInt();
+		System.out.print("Enter the number that you want to calculate: ");
+		num = scan.nextInt();
+
+		if(menu == 1){
+			System.out.println("Reciprocal: " + calcReciprocal_1711625(num));
+		}
+		else 
+			System.out.println("Absolute number: " + calcAbsolute_1711625(num));
+		System.out.println();
+	}
+
+	private double calcReciprocal_1711625(double a){
+		if (a == 0)
+			return 0;
+		else if (a<0){
+			a = a * -1;
+			return (-1) * 1/a;
+		}
+		else 
+			return 1/a;
+	}
+
+	private int calcAbsolute_1711625(int a){
+		if (a < 0)
+			return a * -1;
+		return a;
+	}
+
+
+
 }
