@@ -65,6 +65,10 @@ public class MainProgram {
             	System.out.println("[Student ID: 1711625]");
 	    	hw_1711625();
 	}
+	else if ( student ID == 1616409 ){
+		System.out.println("[Student ID: 1616409]");
+		cal_1616409();
+	}	
     }
 
     public void calculate_1710904() {
@@ -271,6 +275,30 @@ public class MainProgram {
 		if (a < 0)
 			return a * -1;
 		return a;
+	}
+	
+	public void cal_1616409(){
+	   Scanner scan = new Scanner(System.in);
+		System.out.println("1. Factorial");
+		System.out.println("2. Sum");
+		int num=scan.nextInt();
+		int count,i;
+		if (num==1) {
+		  System.out.println("Put your number under 32!");	
+		  int cal=scan.nextInt();
+		  count=1;
+		  for(i=1;i<=cal;i++) 
+			count *= i;
+		  System.out.println("The result is "+count);
+		 }
+		 else if(num==2) {
+		   System.out.println("Put your number!");
+		   int cal=scan.nextInt();
+		   count=0;
+		   for(i=0;i<=cal;i++)
+			   count += i;
+		   System.out.println("The result is "+count);
+		}
 	}
 
 
